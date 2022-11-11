@@ -1,0 +1,63 @@
+
+/* ------------------------MOBILE FIRST------------------------ */
+
+body {
+    font-family: "Roboto Condensed", serif;
+    background-image: url('../images/blog-background.jpg');
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* navbar */
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(59, 59, 59);
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #ffffff;
+    color: rgb(9, 5, 5);
+}
+
+/* primary css for a iniform look for pages footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    padding: 3% 0;
+}
+/* ------------------------------------Design for intermediate screens---------------------------------------------- */
+@media (min-width: 600px) and (max-width:900px) {
+
+
+}
+
+
+/* ------------------------------------Design for bigger screens---------------------------------------------- */
+@media(min-width:900px) {
+
+
+}

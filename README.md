@@ -1,2 +1,2 @@
-# Landing-Page
-For Udacity Project
+# Personal-Blog-Website
+Udacity
