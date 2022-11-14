@@ -28,21 +28,31 @@
             </div>
         </div>
         <script>
-            function changeText(id) {
-                obj = document.getElementById(id);
-                obj.innerHTML=id;
-                // console.log(obj);
+            function changeText(x) {
+                console.log(x);
+
+                if (typeof x === 'string')
+                {
+                    let obj = document.getElementById(x);
+                    obj.innerHTML=x;
+                }
+                else {
+                    x.innerHTML='new test';
+                }
             }
         </script>
 
-        <h1 id="item1" onclick="changeText ('item1')">Click here</h1>
-        <h1 id="item2" onclick="changeText ('item2')">Click here 2</h1>
+        <!-- <h1 id="item1" onclick="changeText ('item1')">Click here</h1>
+        <h1 id="item2" onclick="changeText ('item2')">Click here 2</h1> -->
+        <h1 id="item1" onclick="changeText ('item2')">Click here</h1>
+        <h1 id="item2" onclick="changeText ('item1')">Click here 2</h1>
+
 
         
         <!-- footer with copyright -->
         <div class="footer box" onclick="changeText (this)"> ©Aghata 2022</div>
     </div>
-    <img class="planner" src="./images/the-plan.jpg">
+    <img class="planner" src="./images/the-plan.jpg" onclick="changeText ('item1')">
     <script src="./js/app.js"></script>
     <!-- <script>
         console.log("no HTML");
