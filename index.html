@@ -27,16 +27,26 @@
                 <a href="post.html">Blog Posts</a>
             </div>
         </div>
-        
+        <script>
+            function changeText(id) {
+                obj = document.getElementById(id);
+                obj.innerHTML=id;
+                // console.log(obj);
+            }
+        </script>
+
+        <h1 id="item1" onclick="changeText ('item1')">Click here</h1>
+        <h1 id="item2" onclick="changeText ('item2')">Click here 2</h1>
+
         
         <!-- footer with copyright -->
-        <div class="footer box"> ©Aghata 2022</div>
+        <div class="footer box" onclick="changeText (this)"> ©Aghata 2022</div>
     </div>
     <img class="planner" src="./images/the-plan.jpg">
     <script src="./js/app.js"></script>
-    <script>
+    <!-- <script>
         console.log("no HTML");
-    </script>
+    </script> -->
 </body>
 
 </html>

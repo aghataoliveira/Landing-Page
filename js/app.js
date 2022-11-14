@@ -1,12 +1,12 @@
 // On this function I am trying to change the image on the page using the function mouseover, and changing it back to the previous image using mouseout
 
-var imageTest = document.getElementsByClassName("planner");
-image.addEventListener('mouseover', function (imageTest) {
-    image.src = images/the-decision.jpg;
-})
-image.addEventListener('mouseout', function (imageTest) {
-    image.src = images/the-plan.jpg;
-})
+// var imageTest = document.getElementsByClassName("planner");
+// image.addEventListener('mouseover', function (imageTest) {
+//     image.src = images/the-decision.jpg;
+// })
+// image.addEventListener('mouseout', function (imageTest) {
+//     image.src = images/the-plan.jpg;
+// })
 
 
 
