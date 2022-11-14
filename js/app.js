@@ -1,12 +1,23 @@
+// On this function I am trying to change the image on the page using the function mouseover, and changing it back to the previous image using mouseout
 
-function myFunction() {
-alert("I am an alert box!");
-}
+var imageTest = document.getElementsByClassName("planner");
+image.addEventListener('mouseover', function (imageTest) {
+    image.src = images/the-decision.jpg;
+})
+image.addEventListener('mouseout', function (imageTest) {
+    image.src = images/the-plan.jpg;
+})
 
-// change the values of `balance`, `checkBalance`, and `isActive` to test your code
-var balance = 10;
-var checkBalance = true;
-var isActive = true;
+
+
+// function myFunction() {
+// alert("I am an alert box!");
+// }
+
+// // change the values of `balance`, `checkBalance`, and `isActive` to test your code
+// var balance = 10;
+// var checkBalance = true;
+// var isActive = true;
 
 // your code goes here
 // check your balance?? false
@@ -68,4 +79,40 @@ var isActive = true;
 //     console.log ("3XL");
 // } else {
 //     console.log ("NA");
+// }
+
+
+// Quiz about LOOPS
+/*
+ * Programming Quiz: JuliaJames (4-1)
+ */
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a variable `x` with a starting value of `1`
+ * - Your code should include a `while` loop
+ * - Your `while` loop should have a stop condition
+ * - Your code should use a conditional statement
+ * - Your code should increment `x` by `1` each time the loop executes
+ * - Your code should produce the expected output
+ * - Your code should not be empty
+ * - BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
+ */
+// var x = 1;
+
+// while ( x <= 20) {
+//     if ( x % 3 === 0 && x % 5 === 0){
+//         console.log ("JuliaJames");
+//     } else if(x % 3 === 0) {
+//         console.log ("Julia");
+//     //If the number is divisible by 5, print "James" 
+//     } else if (x % 5 === 0){
+//         console.log ("James");
+//     //If the number is divisible by 3 and 5, print "JuliaJames"
+//     } else  {
+//         console.log (x);
+//     }
+//     x = x + 1;
+//     // check divisibility
+//     // print Julia, James, or JuliaJames
+//     // increment x
 // }
