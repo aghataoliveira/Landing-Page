@@ -1,3 +1,8 @@
+
+
+//---------------------------------------------------------------CONDITIONALS-----------------------------------------------------------------
+
+
 // On this function I am trying to change the image on the page using the function mouseover, and changing it back to the previous image using mouseout
 
 // var imageTest = document.getElementsByClassName("planner");
@@ -80,6 +85,10 @@
 // } else {
 //     console.log ("NA");
 // }
+
+
+//---------------------------------------------------------------LOOPS-----------------------------------------------------------------
+
 
 
 // Quiz about LOOPS
@@ -213,7 +222,7 @@
  * - Your code should use a nested `for` loop'
  * - Your code should produce the expected output, as explained above
  */
- 
+
 // Write your code here
 // let row = 0;
 // let seat = 0;
@@ -222,3 +231,68 @@
 //         console.log(row + "-" + seat);
 //     }
 // }
+
+
+
+//---------------------------------------------------------------FUNCTION-----------------------------------------------------------------
+
+// function findAverage(x, y) {
+//     var answer = (x + y) / 2;
+//     return answer;
+// }
+
+// var avg = findAverage(5, 9);
+
+//Declare a function called laugh() that returns "hahahahahahahahahaha!". Print the value returned from the laugh() function to the console.
+/*
+ * Programming Quiz: Laugh it Off 1 (5-1)
+ */
+
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a `laugh()` function
+ * - Your `laugh()` function should return the correct output
+ * - Your code should print `\"hahahahahahahahahaha!\"` by calling the `laugh()` function inside `console.log()`
+ * - BE CAREFUL ABOUT THE PUNCTUATION AND THE EXACT WORDS TO BE PRINTED.
+ */
+
+
+// your code goes here
+// function laugh(){
+//     var x = "hahahahahahahahahaha!"
+//     return x;
+// }
+// console.log(laugh());
+
+
+//Function is PRIMe? This will work only on browsers due to the true false statements in the "return"
+// function isPrime(integer) {
+//     for(var x = 2; x <integer; x++){
+//         if(integer % x === 0){
+//             console.log(integer + " is divisible by " + x);
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// isPrime(1237489277119);
+
+
+
+// function inside function 
+
+// function addTen(x) {
+//     return x + 10;
+//   }
+//   function divideByThree(y) {
+//     return y / 3;
+//   }
+//   var result = addTen(2);
+//   console.log(divideByThree(result));
+//VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+// EXPLANATION // 
+//var result = addTen(2); // the result variable will be assigned the value of 12
+// divideByThree(result); // passes the value of 12 as an argument into the divideByThree function
+//The divideByThree() function will divide the value of 12 by 3 and return 4!
+
