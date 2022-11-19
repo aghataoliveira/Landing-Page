@@ -1,5 +1,3 @@
-
-
 //---------------------------------------------------------------CONDITIONALS-----------------------------------------------------------------
 
 
@@ -325,13 +323,13 @@
 // var favoriteMovie = function displayFavorite(movieName) {
 //     console.log("My favorite movie is " + movieName);
 //   };
-  
+
 //   // Function declaration that has two parameters: a function for displaying
 //   // a message, along with a name of a movie
 //   function movies(messageFunction, name) {
 //     messageFunction(name);
 //   }
-  
+
 //   // Call the movies function, pass in the favoriteMovie function and name of movie
 //   movies(favoriteMovie, "Finding Nemo");
 
@@ -341,7 +339,7 @@
 // function movies(messageFunction, name) {
 //     messageFunction(name);
 //   }
-  
+
 //   // call the movies function, pass in the function and name of movie
 //   movies(function displayFavorite(movieName) {
 //     console.log("My favorite movie is " + movieName);
@@ -351,28 +349,42 @@
 
 
 //---------------------------------------------------------------ARRAY-----------------------------------------------------------------
-var donutBox = [
-    ["glazed", "chocolate glazed", "cinnamon"],
-    ["powdered", "sprinkled", "glazed cruller"],
-    ["chocolate cruller", "Boston creme", "creme de leche"]
-  ];
-  
-  for (var row = 0; row < donutBox.length; row++) {
-    // here, donutBox[row].length refers to the length of the donut array currently being looped over
-    for (var column = 0; column < donutBox[row].length; column++) {
-      console.log(donutBox[row][column]);
-    }
-  }
-  
-  
-  var bills = [50.23, 19.12, 34.01,
-      100.11, 12.15, 9.90, 29.11, 12.99,
-      10.00, 99.22, 102.20, 100.10, 6.77, 2.22
-  ];
-  
-  var totals = bills.map(function(bill){
-      bill = bill *0.15 + bill;
-      bill = (bill.toFixed(2));
-      return(Number(bill));
-  });
-  console.log(totals);
+// var donutBox = [
+//     ["glazed", "chocolate glazed", "cinnamon"],
+//     ["powdered", "sprinkled", "glazed cruller"],
+//     ["chocolate cruller", "Boston creme", "creme de leche"]
+// ];
+
+// for (var row = 0; row < donutBox.length; row++) {
+//     // here, donutBox[row].length refers to the length of the donut array currently being looped over
+//     for (var column = 0; column < donutBox[row].length; column++) {
+//         console.log(donutBox[row][column]);
+//     }
+// }
+
+
+// var bills = [50.23, 19.12, 34.01,
+//     100.11, 12.15, 9.90, 29.11, 12.99,
+//     10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+// ];
+
+// var totals = bills.map(function (bill) {
+//     bill = bill * 0.15 + bill;
+//     bill = (bill.toFixed(2));
+//     return (Number(bill));
+// });
+// console.log(totals);
+
+// //---------------------------------------------------------------OBJECTS-----------------------------------------------------------------
+// var umbrella = {
+//     color: "pink",
+//     isOpen: false,
+//     open: function () {
+//         if (umbrella.isOpen === true) {
+//             return "The umbrella is already opened!";
+//         } else {
+//             umbrella.isOpen = true;
+//             return "Julia opens the umbrella!";
+//         }
+//     }
+// };
