@@ -388,3 +388,24 @@
 //         }
 //     }
 // };
+
+
+//---------------------------------------------------------------DESTRUCTURING-----------------------------------------------------------------
+// testing destructuring an object
+// const luan = {
+//     eyes: 'brown',
+//     cheeks: 'dimples',
+//     skin: 'pale',
+//     children: 'Alan'
+// }
+// const {eyes, cheeks, skin, children} = luan;
+
+// console.log(children);
+
+// // testing destructuring an array
+
+// let principe = ['luan', 'voce', 'eh', 'lindo', 'e', 'eu', 'te', 'amo'];
+
+// let [x, , , , ,y,z,a] = principe;
+
+// console.log(x,y,z,a);
