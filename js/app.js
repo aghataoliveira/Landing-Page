@@ -409,3 +409,67 @@
 // let [x, , , , ,y,z,a] = principe;
 
 // console.log(x,y,z,a);
+
+
+
+
+
+
+
+//---------------------------------------------------------------FOR in LOOP-----------------------------------------------------------------
+// The for loop
+// The for loop is obviously the most common type of loop there is, so this should be a quick refresher.
+
+// const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// for (let i = 0; i < digits.length; i++) {
+//   console.log(digits[i]);
+// }
+
+//---------------------------------------------------------------FOR OF LOOP-----------------------------------------------------------------
+
+// For...of loop
+// The for...of loop is used to loop over any type of data that is iterable.
+
+// You write a for...of loop almost exactly like you would write a for...in loop, except you swap out in with of and you can drop the index.
+
+// const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// for (const digit of digits) {
+//   console.log(digit);
+// }
+
+
+// And you don’t have to worry about adding new properties to objects. The for...of loop will only loop over the values in the object.
+
+// Array.prototype.decimalfy = function() {
+//   for (i = 0; i < this.length; i++) {
+//     this[i] = this[i].toFixed(2);
+//   }
+// };
+
+// const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// for (const digit of digits) {
+//   console.log(digit);
+// }
+
+
+// function average(...nums) {
+//     let total = 0;
+//     let count = 0;
+//     if (count >= 1) {
+//         for (const num of nums) {
+//             total += num;
+//             count++;
+//         }
+//         return total / count;
+//     } else {
+//         return 0;
+//     }
+// }
+
+// console.log(average(2, 6));
+// console.log(average(2, 3, 3, 5, 7, 10));
+// console.log(average(7, 1432, 12, 13, 100));
+// console.log(average());
