@@ -475,3 +475,14 @@
 // console.log(average());
 
 //---------------------------------------------------------------CREATING CONTENT WITH JAVASCRIPT-----------------------------------------------------------------
+// 💡Project Code 💡
+// Instructions and a walkthrough of the project were in the previous section. You can clone the project from the GitHub link below. 
+// Look back at the previous section to see detailed information about the project and a walkthrough video.
+
+// Project repository: https://github.com/udacity/course-JS-and-the-DOM
+
+// index.html
+
+// The index.html serves as a starter template for you to get started. There might be a slight mismatch between the actual content of index.html 
+// file downloaded from GitHub vs. the one shown in the demo. However, 
+// the mismatch would not block you from practicing the classroom instructions.
