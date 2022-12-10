@@ -60,4 +60,14 @@
 // Set sections as active
 
 
+
+// This is a test on creating a section using JavaScript
+const mySection = document.createElement('section');
+const textOfSection = document.createTextNode ('This is for testig purposes. I am ALIVEEEE');
+
+mySection.appendChild(textOfSection);
+document.body.appendChild(mySection);
+
+
+//This line tests if all my content is working for this page
 console.log('to aqui!');
