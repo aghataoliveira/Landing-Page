@@ -59,14 +59,47 @@
 
 // Set sections as active
 
+//stackOverflow test
+(function(){
 
+    // All items we'd like to add
+    var navItems = [
+        {href: 'http://google.com', text: 'Google'},
+        {href: 'http://bing.com', text: 'Bing'},
+        {href: 'http://stackoverflow.com', text: 'StackOverflow'}
+    ];
 
-// This is a test on creating a section using JavaScript
-const mySection = document.createElement('section');
-const textOfSection = document.createTextNode ('This is for testig purposes. I am ALIVEEEE');
+    // A few variables for use later
+    var navElem = document.createElement("nav"),
+        navList = document.createElement("ul"), 
+        navItem, navLink;
 
-mySection.appendChild(textOfSection);
-document.body.appendChild(mySection);
+    navElem.appendChild(navList);
+
+    // Cycle over each nav item
+    for (var i = 0; i < navItems.length; i++) {
+        // Create a fresh list item, and anchor
+        navItem = document.createElement("li");
+        navLink = document.createElement("a");
+
+        // Set properties on anchor
+        navLink.href = navItems[i].href;
+        navLink.innerHTML = navItems[i].text;
+
+        // Add anchor to list item, and list item to list
+        navItem.appendChild(navLink);
+        navList.appendChild(navItem);
+    }
+
+    // Set first list item as current
+    navList.children[0].className = "current";
+
+    // Add list to body (or anywhere else)
+    window.onload = function () {
+        document.body.appendChild(navElem);
+    }
+
+}());
 
 
 //This line tests if all my content is working for this page
