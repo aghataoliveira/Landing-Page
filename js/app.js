@@ -22,7 +22,14 @@
  * Define Global Variables
  * 
 */
-
+// Get the elements first
+const NavBar = document.getElementById("navbar__list");
+const Section = document.querySelectorAll("section");
+const Section1 = document.getElementById("section1");
+const Section2 = document.getElementById("section2");
+const Section3 = document.getElementById("section3");
+const Section4 = document.getElementById("section4");
+const NavBarSelect = document.querySelectorAll(".navbar__menu a");
 
 /**
  * End Global Variables
