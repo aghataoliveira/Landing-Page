@@ -34,21 +34,6 @@ const section = document.querySelectorAll('section');
 // const NavBarSelect = document.querySelectorAll('.navbar__menu a');
 
 
-// console.log(navBar);
-// setting CSS for the NAVBAR
-// navBar.style.backgroundColor = 'white';
-// navBar.style.padding = '15px';
-// navBar.style.margin = '0';
-// navBar.style.overflow = 'hidden';
-// navBar.style.width = '100%';
-// navBar.style.position = 'fixed';
-
-
-
-
-// section3.style.backgroundColor = 'gray';
-// section4.style.backgroundColor = 'purple';
-
 
 /**
  * End Global Variables
@@ -74,8 +59,6 @@ a.href = `#${item.id}`;
 //setting CSS properties
 a.style.textDecoration = 'none';
 a.style.padding = '55px';
-a.style.color = 'blue';
-
 // append list
 list.appendChild(li);
 });
@@ -108,51 +91,6 @@ list.appendChild(li);
 
 // Set sections as active
 
-//stackOverflow test
-// (function(){
-
-//     // All items we'd like to add
-//     var navItems = [
-//         {href: 'http://google.com', text: 'Google'},
-//         {href: 'http://bing.com', text: 'Bing'},
-//         {href: 'http://stackoverflow.com', text: 'StackOverflow'}
-//     ];
-
-//     // A few variables for use later
-//     var navElem = document.createElement('nav'),
-//         navList = document.createElement('ul'), 
-//         navItem, navLink;
-
-//     navElem.appendChild(navList);
-//     navElem.style.display = 'block';
-//     navElem.style.cssText = 'color: blue; background-color: orange; font-size: 3.5em';
-
-
-//     // Cycle over each nav item
-//     for (var i = 0; i < navItems.length; i++) {
-//         // Create a fresh list item, and anchor
-//         navItem = document.createElement('li');
-//         navLink = document.createElement('a');
-
-//         // Set properties on anchor
-//         navLink.href = navItems[i].href;
-//         navLink.innerHTML = navItems[i].text;
-
-//         // Add anchor to list item, and list item to list
-//         navItem.appendChild(navLink);
-//         navList.appendChild(navItem);
-//     }
-
-//     // Set first list item as current
-//     navList.children[0].className = 'current';
-
-//     // Add list to body (or anywhere else)
-//     window.onload = function () {
-//         document.body.appendChild(navElem);
-//     }
-
-
-// }());
 
 
 //This line tests if all my content is working for this page
