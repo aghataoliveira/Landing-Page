@@ -11,64 +11,40 @@
  * 
  * JS Standard: ESlint
  * 
-*/
+ */
 
 /**
  * Comments should be present at the beginning of each procedure and class.
  * Great to have comments before crucial code sections within the procedure.
-*/
+ */
 
 /**
  * Define Global Variables
  * 
-*/
+ */
 // Get the elements first
-const navBar = document.getElementById('navbar__list');
-// const navBar = document.querySelector('navbar__list');
-const section = document.querySelectorAll('section');
-// const section1 = document.getElementById('section1');
-// const section2 = document.getElementById('section2');
-// const section3 = document.getElementById('section3');
-// const section4 = document.getElementById('section4');
-
-// const NavBarSelect = document.querySelectorAll('.navbar__menu a');
-
+// const navBar = document.getElementById('navbar__list');
+const sections = document.querySelectorAll('section');
 
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
-*/
+ */
 
 let list = document.getElementById('navbar__list');
 
-section.forEach((item, i)=>{
-//creating the List Element
-let li = document.createElement('li');
-//creating the nav Element
-let a = document.createElement('a');
-//here I am setting the nav inner text using the data-nat
-a.innerText = item.getAttribute('data-nav');
-//creating the class for my nav
-a.classList.add('linkMenu');
-//appending the nav to my list
-li.appendChild(a);
-//creating the href to work when I click the nav
-a.href = `#${item.id}`;
-//setting CSS properties
-a.style.textDecoration = 'none';
-a.style.padding = '55px';
-// append list
-list.appendChild(li);
-});
+
+
+
 
 
 /**
  * End Helper Functions
  * Begin Main Functions
  * 
-*/
+ */
 
 // build the nav
 
@@ -83,11 +59,58 @@ list.appendChild(li);
  * End Main Functions
  * Begin Events
  * 
-*/
+ */
 
 // Build menu 
+sections.forEach((item) => {
+    //creating the List Element
+    let li = document.createElement('li');
+    //creating the nav Element
+    let a = document.createElement('a');
+    //here I am setting the nav inner text using the data-nat
+    a.innerText = item.getAttribute('data-nav');
+    //creating the class for my nav
+    a.classList.add('linkMenu');
+    a.addEventListener('click', function () {
+        this.style.color = 'red';
+        console.log(this+ ' The heading was clicked!');
+    });
+    //appending the nav to my list
+    li.appendChild(a);
+    //creating the href to work when I click the nav
+    a.href = `#${item.id}`;
+    //setting CSS properties
+    a.style.textDecoration = 'none';
+    a.style.padding = '55px';
+    // append list
+    list.appendChild(li);
+});
+//adding click event listener
+// let clicked = document.getElementsByClassName('landing__container');
+// console.log(clicked);
+
+
+
+//distinquishing
+sections.forEach((item) => {
+});
+
+//FAZER - CLICAR NA SECTION E VER NO CONSOLE.LOG A SECAO CLICADA
+
+
+
 
 // Scroll to section on link click
+// const section3 = document.getElementById("section3");
+// console.log(section3.innerText);
+
+
+
+//function
+
+
+//print the first element
+
 
 // Set sections as active
 
