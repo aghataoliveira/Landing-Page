@@ -22,9 +22,17 @@
  * Define Global Variables
  * 
  */
+
+
+
 // Get the elements first
 // const navBar = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
+// const section1 = document.getElementById("section1");
+// const section2 = document.getElementById("section2");
+// const section3 = document.getElementById("section3");
+// const section4 = document.getElementById("section4");
+let list = document.getElementById('navbar__list');
 
 
 /**
@@ -33,7 +41,7 @@ const sections = document.querySelectorAll('section');
  * 
  */
 
-let list = document.getElementById('navbar__list');
+
 
 
 
@@ -47,13 +55,86 @@ let list = document.getElementById('navbar__list');
  */
 
 // build the nav
+sections.forEach((section) => {
+    //creating the List Element
+    let li_nav = document.createElement('li');
+
+    //creating the nav Element
+    let a = document.createElement('a');
+
+    //here I am setting the nav inner text using the data-nat
+    a.innerText = section.getAttribute('data-nav');
+    const box = section.getBoundingClientRect();
+    console.log('section',section);
+    // console.log(box);
+    // console.log(box['y']);
+    let boudingBox = box['y'];
+
+    //creating the class for my nav
+    a.classList.add('linkMenu');
 
 
-// Add class 'active' to section when near top of viewport
+    //appending the nav to my list
+    li_nav.appendChild(a);
 
+    //creating the href to work when I click the nav
+    // a.href = `#${section.id}`;
+    a.href = '#';
+
+    a.addEventListener("click", function () {
+        window.scrollTo({
+            top: boudingBox,
+            left: 0,
+            behavior: 'smooth'
+        });
+        });
+
+    //setting CSS properties
+    a.style.textDecoration = 'none';
+    a.style.padding = '55px';
+
+    // append list
+    list.appendChild(li_nav);
+});
+
+
+// Add class 'active' to section when it is near top of viewport
+
+function makeActive() {
+    for (const section of sections) {
+        const box = section.getBoundingClientRect();
+        console.log(section);
+        console.log(box);
+        // You can play with the values in the "if" condition to further make it more accurate. 
+        if (box.top <= 150 && box.bottom >= 150) {
+            // Apply active state on the current section and the corresponding Nav link.
+            document.querySelector('h2').style.color = '';   
+        } else {
+            // Remove active state from other section and corresponding Nav link.
+            document.querySelector('h2').style.color = 'green';
+            a.style.color = 'green';
+
+        }
+    }
+}
+
+
+// console.log(section2.innerHTML);
+
+// Make sections active
+// document.addEventListener("scroll", function () {
+//     makeActive();
+// }); 
 
 // Scroll to anchor ID using scrollTO event
 
+// section2.addEventListener("click", function () {
+// window.scrollTo({
+//     top: -864,
+//     left: 0,
+//     behavior: 'smooth'
+// });
+// });
 
 /**
  * End Main Functions
@@ -61,56 +142,24 @@ let list = document.getElementById('navbar__list');
  * 
  */
 
+
+
+//distinquishing section*
+let button = document.querySelectorAll('h2');
+for (let i = 0; i < button.length; i++) {
+    button[i].onclick = function () {
+        button.forEach(function (btn) {
+            btn.style = '';
+        });
+        this.style.color = 'blue';
+    }
+}
+
+
+
 // Build menu 
-sections.forEach((item) => {
-    //creating the List Element
-    let li = document.createElement('li');
-    //creating the nav Element
-    let a = document.createElement('a');
-    //here I am setting the nav inner text using the data-nat
-    a.innerText = item.getAttribute('data-nav');
-    //creating the class for my nav
-    a.classList.add('linkMenu');
-    a.addEventListener('click', function () {
-        this.style.color = 'red';
-        console.log(this+ ' The heading was clicked!');
-    });
-    //appending the nav to my list
-    li.appendChild(a);
-    //creating the href to work when I click the nav
-    a.href = `#${item.id}`;
-    //setting CSS properties
-    a.style.textDecoration = 'none';
-    a.style.padding = '55px';
-    // append list
-    list.appendChild(li);
-});
-//adding click event listener
-// let clicked = document.getElementsByClassName('landing__container');
-// console.log(clicked);
-
-
-
-//distinquishing
-sections.forEach((item) => {
-});
-
-//FAZER - CLICAR NA SECTION E VER NO CONSOLE.LOG A SECAO CLICADA
-
-
-
 
 // Scroll to section on link click
-// const section3 = document.getElementById("section3");
-// console.log(section3.innerText);
-
-
-
-//function
-
-
-//print the first element
-
 
 // Set sections as active
 

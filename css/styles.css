@@ -18,6 +18,15 @@ body {
     color: #fff;
 }
 
+.linkMenu:hover{
+    color:rgba(0, 13, 60, 1);
+    background-color: #cc1;
+}
+
+.active {
+    font-weight: bold;
+    color: red;
+}
 
 /* Typeography General*/
 h1 {
