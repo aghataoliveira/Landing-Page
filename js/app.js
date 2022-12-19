@@ -55,6 +55,7 @@ let list = document.getElementById('navbar__list');
  */
 
 // build the nav
+// Build menu 
 sections.forEach((section) => {
     //creating the List Element
     let li_nav = document.createElement('li');
@@ -65,9 +66,6 @@ sections.forEach((section) => {
     //here I am setting the nav inner text using the data-nat
     a.innerText = section.getAttribute('data-nav');
     const box = section.getBoundingClientRect();
-    console.log('section',section);
-    // console.log(box);
-    // console.log(box['y']);
     let boudingBox = box['y'];
 
     //creating the class for my nav
@@ -81,13 +79,16 @@ sections.forEach((section) => {
     // a.href = `#${section.id}`;
     a.href = '#';
 
+    // Scroll to anchor ID using scrollTO event
+    // Scroll to section on link click
     a.addEventListener("click", function () {
         window.scrollTo({
             top: boudingBox,
-            left: 0,
-            behavior: 'smooth'
+            // left: 0,
+            behavior: 'smooth',
         });
-        });
+    });
+
 
     //setting CSS properties
     a.style.textDecoration = 'none';
@@ -100,51 +101,29 @@ sections.forEach((section) => {
 
 // Add class 'active' to section when it is near top of viewport
 
-function makeActive() {
-    for (const section of sections) {
-        const box = section.getBoundingClientRect();
-        console.log(section);
-        console.log(box);
-        // You can play with the values in the "if" condition to further make it more accurate. 
-        if (box.top <= 150 && box.bottom >= 150) {
-            // Apply active state on the current section and the corresponding Nav link.
-            document.querySelector('h2').style.color = '';   
-        } else {
-            // Remove active state from other section and corresponding Nav link.
-            document.querySelector('h2').style.color = 'green';
-            a.style.color = 'green';
-
-        }
-    }
-}
-
-
-// console.log(section2.innerHTML);
-
-// Make sections active
-// document.addEventListener("scroll", function () {
-//     makeActive();
-// }); 
-
-// Scroll to anchor ID using scrollTO event
-
-// section2.addEventListener("click", function () {
-// window.scrollTo({
-//     top: -864,
-//     left: 0,
-//     behavior: 'smooth'
-// });
-// });
-
 /**
  * End Main Functions
  * Begin Events
  * 
  */
+// Trying hightling the active
+let buttons = document.querySelectorAll('a');
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = function () {
+        buttons.forEach(function (btn) {
+            btn.style.color = '';
+            btn.style.backgroundColor = '';
+        });
+        this.style.color = 'blue';
+        this.style.backgroundColor = 'pink';
+    }
+}
 
+// Make sections active
 
 
 //distinquishing section*
+
 let button = document.querySelectorAll('h2');
 for (let i = 0; i < button.length; i++) {
     button[i].onclick = function () {
@@ -157,11 +136,6 @@ for (let i = 0; i < button.length; i++) {
 
 
 
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
 
 
 
