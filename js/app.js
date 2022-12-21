@@ -80,7 +80,6 @@ sections.forEach((section) => {
             top: boudingBox,
             behavior: 'smooth',
         });
-        
     });
 
 
@@ -106,6 +105,7 @@ for (let i = 0; i < buttons.length; i++) {
         });
         this.style.color = 'blue';
         this.style.backgroundColor = 'pink';
+        
     }
 }
 
@@ -115,19 +115,15 @@ for (let i = 0; i < buttons.length; i++) {
 
 //distinquishing section*
 
-// let button = document.querySelectorAll('h2');
-// for (let i = 0; i < button.length; i++) {
-//     button[i].onclick = function () {
-//         button.forEach(function (btn) {
-//             btn.style = '';
-//         });
-//         this.style.color = 'blue';
-//     }
-// }
-
-
-
-
+let sectionTitle = document.querySelectorAll('h2');
+for (let i = 0; i < sectionTitle.length; i++) {
+    sectionTitle[i].onclick = function () {
+        sectionTitle.forEach(function (btn) {
+            btn.style = '';
+        });
+        this.style.color = 'blue';
+    }
+}
 
 
 //This line tests if all my content is working for this page
