@@ -26,12 +26,7 @@
 
 
 // Get the elements first
-// const navBar = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
-// const section1 = document.getElementById("section1");
-// const section2 = document.getElementById("section2");
-// const section3 = document.getElementById("section3");
-// const section4 = document.getElementById("section4");
 let list = document.getElementById('navbar__list');
 
 
@@ -71,7 +66,6 @@ sections.forEach((section) => {
     //creating the class for my nav
     a.classList.add('linkMenu');
 
-
     //appending the nav to my list
     li_nav.appendChild(a);
 
@@ -81,23 +75,19 @@ sections.forEach((section) => {
 
     // Scroll to anchor ID using scrollTO event
     // Scroll to section on link click
-    a.addEventListener("click", function () {
+    a.addEventListener('click', function () {
         window.scrollTo({
             top: boudingBox,
-            // left: 0,
             behavior: 'smooth',
         });
+        
     });
 
 
-    //setting CSS properties
-    a.style.textDecoration = 'none';
-    a.style.padding = '55px';
-
     // append list
     list.appendChild(li_nav);
-});
 
+});
 
 // Add class 'active' to section when it is near top of viewport
 
@@ -119,20 +109,21 @@ for (let i = 0; i < buttons.length; i++) {
     }
 }
 
+
 // Make sections active
 
 
 //distinquishing section*
 
-let button = document.querySelectorAll('h2');
-for (let i = 0; i < button.length; i++) {
-    button[i].onclick = function () {
-        button.forEach(function (btn) {
-            btn.style = '';
-        });
-        this.style.color = 'blue';
-    }
-}
+// let button = document.querySelectorAll('h2');
+// for (let i = 0; i < button.length; i++) {
+//     button[i].onclick = function () {
+//         button.forEach(function (btn) {
+//             btn.style = '';
+//         });
+//         this.style.color = 'blue';
+//     }
+// }
 
 
 
