@@ -30,25 +30,6 @@ const sections = document.querySelectorAll('section');
 let list = document.getElementById('navbar__list');
 
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
- */
-
-
-
-
-
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
- */
-
 // build the nav
 // Build menu 
 sections.forEach((section) => {
@@ -60,8 +41,8 @@ sections.forEach((section) => {
 
     //here I am setting the nav inner text using the data-nat
     a.innerText = section.getAttribute('data-nav');
-    const box = section.getBoundingClientRect();
-    let boudingBox = box['y'];
+    const boxY = section.getBoundingClientRect();
+    let boudingBox = boxY['y'];
 
     //creating the class for my nav
     a.classList.add('linkMenu');
@@ -82,7 +63,6 @@ sections.forEach((section) => {
         });
     });
 
-
     // append list
     list.appendChild(li_nav);
 
@@ -96,16 +76,16 @@ sections.forEach((section) => {
  * 
  */
 // Trying hightling the active
-let buttons = document.querySelectorAll('a');
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function () {
-        buttons.forEach(function (btn) {
+let navButtons = document.querySelectorAll('a');
+for (let i = 0; i < navButtons.length; i++) {
+    navButtons[i].onclick = function () {
+        navButtons.forEach(function (btn) {
             btn.style.color = '';
             btn.style.backgroundColor = '';
         });
         this.style.color = 'blue';
         this.style.backgroundColor = 'pink';
-        
+
     }
 }
 
