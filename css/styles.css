@@ -7,7 +7,10 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-
+.blue-bg {
+	background: blue !important;
+	color: white !important;
+}
 
 /* ---- Base Rules ---- */
 body {
