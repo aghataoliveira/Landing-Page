@@ -100,6 +100,7 @@ for (let i = 0; i < navButtons.length; i++) {
         const sectionRelated = getSectionFromText(sections, this.innerText);
         // Make sections active
         sectionRelated.style.backgroundColor = 'pink';
+        sectionRelated.classList.add('your-active-class');
     }
 }
 
@@ -116,6 +117,7 @@ function cleanStyleSections(){
     sections.forEach(function (item) {
         item.style.color = '';
         item.style.backgroundColor = '';
+        item.classList.remove('your-active-class');
     });
 }
 
@@ -124,3 +126,6 @@ function cleanStyleSections(){
 
 //This line tests if all my content is working for this page
 console.log('to aqui!');
+
+
+//Second submission - fixing the Read-me and highlighting the section 
